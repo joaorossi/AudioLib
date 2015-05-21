@@ -1,0 +1,28 @@
+# BINARY NAME
+OUTPUT_BIN = bin/AudioChainTest
+
+# COMPILER OPTIONS
+CFLAGS  = -Wall -std=gnu99 -g
+
+# INCLUDE SEARCH FOLDERS
+CPPFLAGS += -Iinc/
+CPPFLAGS += -I../AudioBase/inc
+
+# OBJECT FILES
+OBJS += src/audio_chain.o
+OBJS += src/audio_node.o
+OBJS += src/AudioChainTest.o
+
+all: $(OBJS)
+	@$(CC) $(CFLAGS) -o $(OUTPUT_BIN) $^ $(LDFLAGS) $(CPPFLAGS)
+	@echo "  LD\t$(OUTPUT_BIN)"
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c -o $@ $^ $(CPPFLAGS)
+	@echo "  CC\t$@"
+
+clean:
+	@rm -rf $(OBJS)
+	@rm -f  $(OUTPUT_BIN)
+
+rebuild: clean all

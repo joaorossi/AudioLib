@@ -1,0 +1,492 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p_a",
+				"p_audio_node"
+			],
+			[
+				"p_au",
+				"p_audio_node"
+			],
+			[
+				"p_aud",
+				"p_audio_node_tail"
+			],
+			[
+				"u3",
+				"u32_buffer_size"
+			],
+			[
+				"p_",
+				"p_audio_node"
+			],
+			[
+				"pq",
+				"pq31_buffer"
+			],
+			[
+				"pq3",
+				"pq31_in_buffer"
+			],
+			[
+				"p_pl",
+				"p_plugin_slot"
+			],
+			[
+				"u32",
+				"u32_param"
+			],
+			[
+				"p_p",
+				"p_plugin"
+			],
+			[
+				"de",
+				"deinit"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"i",
+				"init"
+			],
+			[
+				"MON",
+				"MONO_TO_STEREO"
+			],
+			[
+				"pr",
+				"process"
+			],
+			[
+				"p_plu",
+				"p_plugin_slot"
+			],
+			[
+				"plugin_s",
+				"p_plugin_slot"
+			],
+			[
+				"pl",
+				"plugin"
+			],
+			[
+				"Plugin",
+				"PluginSlot_t"
+			],
+			[
+				"p",
+				"p_head"
+			],
+			[
+				"u",
+				"u32_count"
+			],
+			[
+				"ne",
+				"p_next"
+			],
+			[
+				"AudioNode",
+				"AudioNode_t"
+			],
+			[
+				"MO",
+				"MONO_TO_MONO"
+			],
+			[
+				"MONO",
+				"MONO_TO_MONO"
+			],
+			[
+				"p_audio_no",
+				"p_audio_node_tmp"
+			],
+			[
+				"Audio",
+				"AudioNode_t"
+			],
+			[
+				"Aud",
+				"AudioChain_t"
+			],
+			[
+				"p_audi",
+				"p_audio_node"
+			],
+			[
+				"p_audio",
+				"p_audio_node"
+			],
+			[
+				"MONO_T",
+				"MONO_TO_STEREO"
+			],
+			[
+				"u32_",
+				"u32_buffer_size"
+			],
+			[
+				"AudioC",
+				"AudioChain_t"
+			],
+			[
+				"AudioN",
+				"AudioNode_t"
+			],
+			[
+				"AudioNo",
+				"AudioNode_t"
+			],
+			[
+				"Audi",
+				"Audio"
+			],
+			[
+				"Pl",
+				"PluginSlot_t"
+			],
+			[
+				"Au",
+				"AudioNode_t"
+			],
+			[
+				"BUFF",
+				"BUFFER_ITERATIONS"
+			],
+			[
+				"q31",
+				"q31_a"
+			],
+			[
+				"f64",
+				"f64_proof"
+			],
+			[
+				"FL",
+				"FLT_Q31_CONV"
+			],
+			[
+				"f6",
+				"f64_delay"
+			],
+			[
+				"i32",
+				"i32_write_idx"
+			],
+			[
+				"q",
+				"q31_y"
+			],
+			[
+				"q31_f",
+				"q31_frc_2"
+			],
+			[
+				"q31_fr",
+				"q31_frc_1"
+			],
+			[
+				"q31_c",
+				"q31_c"
+			],
+			[
+				"q31_frc",
+				"q31_frc_comp"
+			],
+			[
+				"f",
+				"f64_frac_read_pos"
+			],
+			[
+				"f64_",
+				"f64_frac_read_pos"
+			],
+			[
+				"pq31",
+				"pq31_in"
+			],
+			[
+				"CO",
+				"BIQUAD_COEFFS"
+			],
+			[
+				"wa",
+				"wave_table_osc_set_incr"
+			],
+			[
+				"dl",
+				"dlsym"
+			],
+			[
+				"wava",
+				"wave_table_osc_init"
+			],
+			[
+				"w",
+				"wave_table_osc_set_type"
+			],
+			[
+				"str",
+				"str_err"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"in",
+				"int32_t"
+			],
+			[
+				"fr",
+				"q31_frc_inx"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"F",
+				"F64_TO_Q31"
+			],
+			[
+				"f32",
+				"f32_a"
+			],
+			[
+				"int",
+				"int32_t"
+			],
+			[
+				"MU",
+				"MUL__Q31_Q31"
+			],
+			[
+				"f3",
+				"f32_a"
+			],
+			[
+				"q3",
+				"q31_in"
+			],
+			[
+				"pq31_re",
+				"pq31_read_idx"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/iir.c",
+			"settings":
+			{
+				"buffer_size": 4078,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/src/delay_line.c",
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/inc/delay_line.h",
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/inc/fixedpoint.h",
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/makefile",
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/src/frac_delay_line.c",
+		"/Users/joaorossifilho/Documents/CronusCore/AudioBase/untitled.sublime-workspace",
+		"/Users/joaorossifilho/Documents/AudioHost/src/audio_node.c",
+		"/Users/joaorossifilho/Documents/AudioHost/inc/audio_node.h",
+		"/Users/joaorossifilho/Documents/AudioHost/src/audio_chain.c",
+		"/Users/joaorossifilho/Documents/AudioHost/inc/audio_chain.h",
+		"/Users/joaorossifilho/Documents/AudioHost/src/plugin_slot.c",
+		"/Users/joaorossifilho/Documents/AudioHost/inc/plugin_slot.h",
+		"/Users/joaorossifilho/Documents/AudioHost/inc/dummy_plugin.h",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/Plugins/Delay/delay.h",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/wto_test.c",
+		"/Users/joaorossifilho/screenrc",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/mult_test.c",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/mult_test",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/wto_test",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/src/fixedpoint.c",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/inc/frac_delay_line.c",
+		"/Users/joaorossifilho/Documents/Cronus/Labs/Z-Core/AudioBase/inc/audiobase.h"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"MAX_BUFFER_SIZE",
+			"cleanup",
+			"AudioNode_t",
+			"PluginSlot_t",
+			"p_audio_node_tmp",
+			"dummy_process__STEREO_IN_STEREO_OUT",
+			"dummy_process__MONO_IN_STEREO_OUT",
+			"dummy_process__MONO_IN_MONO_OUT",
+			"plugin",
+			"f32_b",
+			"f32_a",
+			"uint32_t",
+			"q31_frc_idx",
+			"q31_b",
+			"q31_a",
+			"q31_incr_frc",
+			"f32_c",
+			"MAX_WAVE_TABLE_SIZE",
+			"p_vdl",
+			"VDL",
+			"variable",
+			"u32_length",
+			"pvdl_vdl",
+			"vdl_t",
+			"pvdl_vdl",
+			"vdl_t",
+			"q31_t"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/iir.c",
+					"settings":
+					{
+						"buffer_size": 4078,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true
+}
