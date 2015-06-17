@@ -28,4 +28,8 @@
 *.x86_64
 *.hex
 
+# Mac OS X
 *.DS_Store
+
+# Vim
+*.swp
