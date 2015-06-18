@@ -47,12 +47,13 @@ struct OVRSMP {
 	q31_t		**pq31_filterbank;
 
 	/* Convolution ring buffers */
-	struct CRB	**pcrb_fir_hist;
+	struct CRB	**pcrb_interp_hist;
+	struct CRB	**pcrb_deci_hist;
 
 	/* Oversampled buffer */
 	uint32_t	u32_ovrsmp_buff_len;
 	q31_t		*pq31_interp_buffer;
-	q31_t		*pq31_decimt_buffer;
+	q31_t		*pq31_deci_buffer;
 
 };
 
@@ -118,7 +119,7 @@ _convolute(struct CRB *pcrb_fir_hist, q31_t *pq31_phase_ir, q31_t *pq31_x, q31_t
 }
 
 /************************************************
- *			Oversampler Structure				*
+ *			Oversampler Public Functions		*
  ************************************************/
 
 void *
@@ -150,9 +151,9 @@ oversampler_interpolate(void *p_ref, q31_t *pq31_orig_in)
 {
 	struct OVRSMP *p_ovrsmp = p_ref;
 
-	uint32_t 	u32_i, u32_j;
+	uint32_t u32_i, u32_j;
 
-	q31_t		q31_x, q31_y, *pq31_interp_buffer = NULL;
+	q31_t q31_x, q31_y, *pq31_interp_buffer;
 
 	if (!p_ovrsmp || !pq31_orig_in)
 		return -1;
@@ -160,7 +161,7 @@ oversampler_interpolate(void *p_ref, q31_t *pq31_orig_in)
 	if (!(pq31_interp_buffer = p_ovrsmp->pq31_interp_buffer))
 		return -1;
 
-	/* For each sample */
+	/* For each input sample */
 	for (u32_i = 0; u32_i < p_ovrsmp->u32_orig_buffer_len; u32_i++) {
 
 		q31_x = *pq31_orig_in++;
@@ -168,7 +169,7 @@ oversampler_interpolate(void *p_ref, q31_t *pq31_orig_in)
 		/* For each interpolated sample */
 		for (u32_j = 0; u32_j < p_ovrsmp->u32_ovrsmp_factor; u32_j++) {
 
-			if (_convolute(p_ovrsmp->pcrb_fir_hist[u32_j], p_ovrsmp->pq31_filterbank[u32_j], &q31_x, &q31_y))
+			if (_convolute(p_ovrsmp->pcrb_interp_hist[u32_j], p_ovrsmp->pq31_filterbank[u32_j], &q31_x, &q31_y))
 				return -1;
 
 			*pq31_interp_buffer++ = q31_y;
@@ -178,8 +179,39 @@ oversampler_interpolate(void *p_ref, q31_t *pq31_orig_in)
 }
 
 int
-oversampler_decimate(void *p_ovrsmp, q31_t *pq31_orig_out)
+oversampler_decimate(void *p_ref, q31_t *pq31_orig_out)
 {
+	struct OVRSMP *p_ovrsmp = p_ref;
+
+	uint32_t u32_i, u32_j;
+
+	q31_t q31_y, q31_x, q31_acc, *pq31_deci_buffer;
+
+	if (!p_ovrsmp || !pq31_orig_out)
+		return -1;
+
+	if (!(pq31_deci_buffer = p_ovrsmp->pq31_deci_buffer))
+		return -1;
+
+	/* For each output sample */
+	for (u32_i = 0; u32_i < p_ovrsmp->u32_orig_buffer_len; u32_i++) {
+
+		q31_acc = 0;
+
+		/* For each interpolated sample */
+		for (u32_j = 0; u32_j < p_ovrsmp->u32_orig_buffer_len; u32_j++) {
+
+			q31_x = *pq31_deci_buffer++;
+
+			if (_convolute(p_ovrsmp->pcrb_deci_hist[u32_j], p_ovrsmp->pq31_filterbank[u32_j], &q31_x, &q31_y))
+				return -1;
+
+			q31_acc += q31_y;
+		}
+
+		*pq31_orig_out++ = q31_acc;
+	}
+
 	return 0;
 }
 

@@ -44,9 +44,9 @@ int	oversampler_flush(void *p_ovrsmp);
  * intended for use within the oversampling context only. Both buffers
  * are u32_orig_buffer_len*u32_ovrsmp_factor samples long.
  *
- * @param	*pq31_ovrsmp_out:	Buffer filled by oversampler_interpolate function.
+ * @param	**pq31_ovrsmp_out:	Buffer filled by oversampler_interpolate function.
  *
- * @param	*pq31_ovrsmp_in:	Buffer used by oversampler_decimate function.
+ * @param	**pq31_ovrsmp_in:	Buffer used by oversampler_decimate function.
  *
  * @return	int:				0 on sucess, -1 on error
  */
