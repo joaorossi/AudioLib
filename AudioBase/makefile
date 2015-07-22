@@ -9,6 +9,7 @@ OBJS += src/iir.o
 OBJS += src/delay_line.o
 OBJS += src/frac_delay_line.o
 OBJS += src/wave_table_osc.o
+OBJS += src/oversampler.o
 
 all: $(OBJS)
 	@cp $(OBJS) bin/
