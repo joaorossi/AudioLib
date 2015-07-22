@@ -3,6 +3,9 @@
 
 #include <fixedpoint.h>
 
+#define MAX_OVRSMP_ORIG_BUFF_LEN 	1024
+#define MAX_OVRSMP_FACTOR			16
+
 /**
  * Initialize oversampler structure
  *
